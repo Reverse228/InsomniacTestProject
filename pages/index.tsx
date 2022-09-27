@@ -1,8 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Menu from './components/menu/Menu'
+import {Content} from './components/content/Content'
+import {Menu} from './components/menu/Menu'
 
 const Home: NextPage = () => {
   return (
@@ -15,11 +14,8 @@ const Home: NextPage = () => {
 
       <main>
        <Menu/>
+       <Content/>
       </main>
-
-      <footer>
-       
-      </footer>
     </div>
   )
 }

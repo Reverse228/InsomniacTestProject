@@ -1,32 +1,33 @@
-import Image from 'next/image';
-import React from 'react'
-import styled from 'styled-components';
-import Logo from "../../../public/images/logo.png"
-import CustomBtn from '../customBtn/CustomBtn';
-import { menuBtn, menuBtns } from './Config';
-import menuStyle from "./style/Menu.module.css"
+import { useState, FC } from "react";
+import Image from "next/image";
+import Logo from "../../../public/images/logo.png";
+import { LinkCustom } from "../customBtn/CustomBtn";
+import { data } from "./mockData";
+import { Props } from "./Menu.d";
+import * as S from "./styled";
 
-const MenuBtnP  = styled.p`
-  margin: 0 15px;
-  cursor: pointer;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: black;
-`
+export const Menu: FC = () => {
+  const [linkState, setLinkState] = useState<number>(0);
 
-const Menu = () => {
   return (
-    <div className={menuStyle.menuContainer}>
-      <Image src={Logo} className={menuStyle.img}></Image>
-      <div className={menuStyle.menuBtnsCont}>
-        {menuBtns.map((menuBtn: menuBtn) => {
-          return <MenuBtnP >{menuBtn.name}</MenuBtnP>
+    <S.divMain>
+      <Image src={Logo} />
+      <S.divMenu>
+        {data.map(({ id, name, link }: Props) => {
+          return (
+            <S.menuLink
+              key={id}
+              active={linkState === id}
+              onClick={() => {
+                setLinkState(id);
+              }}
+            >
+              {name}
+            </S.menuLink>
+          );
         })}
-      </div>
-
-      <CustomBtn text={"DOWNLOAD PDF"}/>
-    </div> 
-  )
-}
-
-export default Menu
+      </S.divMenu>
+      <LinkCustom text={"DOWNLOAD PDF"} link={"#"} />
+    </S.divMain>
+  );
+};
