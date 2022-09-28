@@ -9,6 +9,11 @@ export const colors = {
   red: "#D84E30"
 }
 
+export const device = {
+  tablet: `(max-width: 768px)`,
+  mobile: `(max-width: 320px)`
+}
+
 export const flex = (jc: string, ai: string, fd: string) => (`
   display: flex;
   justify-content: ${jc};

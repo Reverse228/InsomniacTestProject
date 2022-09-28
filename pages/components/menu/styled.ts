@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, flex } from "../../../styles/globalStyled";
+import { colors, device, flex } from "../../../styles/globalStyled";
 
 export const menuLink = styled.p.attrs((props: {active: boolean}) => props)`
   margin: 0 15px;
@@ -17,6 +17,10 @@ export const divMain = styled.div`
   ${flex("space-between", 'center', "row")}
 `
 
+
 export const divMenu = styled.div`
-  ${flex("center", 'center', "row")}
+  ${flex("center", 'center', "row")};
+  @media ${device.tablet}{
+    display: none;
+  }
 `
