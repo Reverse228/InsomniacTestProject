@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import {Content} from './components/content/Content'
-import {Menu} from './components/menu/Menu'
+import type { NextPage } from "next";
+import Head from "next/head";
+import { Content } from "./components/content/Content";
+import { Menu } from "./components/menu/Menu";
 
 const Home: NextPage = () => {
   return (
@@ -13,11 +13,11 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-       <Menu/>
-       <Content/>
+        <Menu />
+        {/* <Content/> */}
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

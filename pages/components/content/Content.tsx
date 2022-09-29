@@ -6,17 +6,20 @@ import * as S from "./styled";
 
 export const Content = () => {
   const contentRef = useRef<HTMLDivElement>(null);
-  const [infoHeight, setInfoHeight] = useState<number | undefined>(undefined);
+  const [contentHeight, setContentHeight] =
+    useState<number | undefined>(undefined);
 
   useEffect(() => {
-    setInfoHeight(contentRef.current?.clientHeight);
+    setContentHeight(contentRef.current?.clientHeight);
   }, []);
 
   return (
     <S.Main>
-      <S.LeftDecor />
+      <S.LeftDecorContainer height={contentHeight}>
+        <S.LeftDecor />
+      </S.LeftDecorContainer>
       <S.Content ref={contentRef}>
-        <S.ContactContainer height={infoHeight}>
+        <S.ContactContainer height={contentHeight}>
           <S.IageContainer>
             <Image src={ContentImg} alt="Picture of the author" />
           </S.IageContainer>
