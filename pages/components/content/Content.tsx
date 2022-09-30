@@ -5,21 +5,11 @@ import ContentImg from "../../../public/images/contentImg.png";
 import * as S from "./styled";
 
 export const Content = () => {
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [contentHeight, setContentHeight] =
-    useState<number | undefined>(undefined);
-
-  useEffect(() => {
-    setContentHeight(contentRef.current?.clientHeight);
-  }, []);
-
   return (
     <S.Main>
-      <S.LeftDecorContainer height={contentHeight}>
-        <S.LeftDecor />
-      </S.LeftDecorContainer>
-      <S.Content ref={contentRef}>
-        <S.ContactContainer height={contentHeight}>
+      <S.LeftDecor />
+      <S.Content>
+        <S.ContactContainer>
           <S.IageContainer>
             <Image src={ContentImg} alt="Picture of the author" />
           </S.IageContainer>
@@ -34,6 +24,7 @@ export const Content = () => {
             </Link>
           </S.Contact>
         </S.ContactContainer>
+        <S.InfoSpace />
         <S.Info>
           <S.h2>IDS’s Message</S.h2>
           <S.h3>

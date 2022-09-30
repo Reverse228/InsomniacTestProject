@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
       <main>
         <Menu />
-        {/* <Content/> */}
+        <Content />
       </main>
     </div>
   );

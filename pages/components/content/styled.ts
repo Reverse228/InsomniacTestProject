@@ -3,47 +3,69 @@ import { colors, device} from "../../../styles/globalStyled";
 
 export const Main = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr minmax(769px, 1200px) 1fr;
+  grid-template-rows: 1fr;
+  @media ${device.tablet}{
+    grid-template-columns: 1fr minmax(308px, 769px) 1fr;
+  }
+  @media ${device.mobile}{
+    grid-template-columns: 1fr 2fr;  
+  }
+  @media ${device.menuTablet}{
+    margin-top: 93px;
+  }
 `
 export const Content = styled.div`
-  width: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  width: 100%;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: repeat(3, auto); 
+  grid-template-rows: 200px auto; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "a c c"
+    "a b b"; 
+  @media ${device.mobile}{
+    grid-template-columns: auto; 
+    grid-template-rows: auto 1fr; 
+    grid-template-areas: 
+      "a"
+      "b"; 
+  }
+  
+`
+
+export const ContactContainer = styled.div` 
+  grid-area: a;
+  width: 100%;
+  max-width: 445px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  z-index: 1;
   @media ${device.tablet}{
-    width: 90%;
+    max-width: 301px;
   }
 `
 
-export const ContactContainer = styled.div.attrs((props: {height: number}) => props)` 
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  height: ${(props) => (props.height)}px;
-`
-
 export const IageContainer = styled.div`
+  z-index: -10;
   transform: translateY(100px);
-  z-index: -10
 `
 
 export const Contact = styled.div`
   background: ${colors.green};
-  padding: 25px 75px 25px 50px;
-  z-index: 10;
-  height: 100%;
+  padding: 41px 65px 59px 65px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   @media ${device.tablet}{
-    padding: 40px 35px 25px 25px;
+    padding: 50px 40px;
+  }
+  @media ${device.mobile}{
+    padding: 50px 20px;
   }
 `
 export const h4 = styled.h4`
@@ -53,6 +75,7 @@ export const h4 = styled.h4`
   font-weight: 400;
   @media ${device.tablet}{
     font-size: 20px;
+    font-style: italic;
   }
 `
 export const pContact = styled.p`
@@ -61,6 +84,7 @@ export const pContact = styled.p`
   font-weight: 400;
   @media ${device.tablet}{
     font-size: 16px;
+    font-style: italic;
   }
 `
 
@@ -76,12 +100,23 @@ export const mail = styled.a`
 
 export const Info = styled.div`
   background: ${colors.gray};
-  margin-top: 200px;
-  padding: 75px 125px;
+  padding: 120px 114px 93px 115px;
+  width: 100%;
+  min-width: 310px;
+  grid-area: b;
   @media ${device.tablet}{
-    padding: 35px 45px
+    padding: 70px 60px
+  }
+  @media ${device.mobile}{
+    width: 301px;
+    min-width: 301px;
+    padding: 50px 20px
   }
 `
+export const InfoSpace = styled.div`
+  grid-area: c;
+`
+
 export const h2 = styled.h2`
   margin: 0;
   color: ${colors.black};
@@ -97,6 +132,7 @@ export const h3 = styled.h3`
   font-weight: 400;
   @media ${device.tablet}{
     font-size: 18px;
+    font-style: italic;
   }
 `
 export const pInfo = styled.p`
@@ -110,34 +146,28 @@ export const pInfo = styled.p`
   }
 `
 
-export const LeftDecorContainer = styled.div.attrs((props: {height: number}) => props)` 
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 10%;
-  height: ${(props) => (props.height)}px;
-  @media ${device.tablet}{
-    width: 5%;
-  }
-`
-
 export const LeftDecor = styled.div`
   background: ${colors.blue};
   width: 100%;
-  height: 427px;
+  height: 528.5px;
   z-index: -10;
+  min-width: 36px;
   transform: translateY(101px);
   @media ${device.tablet}{
-    transform: translateY(100.5px);
-    height: 299px;
+    height: 326.5px;
+  }
+  @media ${device.mobile}{
+    min-width: 12px;
   }
 `
 export const RightDecor = styled.div`
   background: ${colors.red};
-  width: 10%;
+  width: 100%;
+  min-width: 36px;
+  align-self: end;
   height: 380px;
   z-index: -10;
-  @media ${device.tablet}{
-    width: 5%;
-  } 
+  @media ${device.mobile}{
+    display: none;
+  }
 `
