@@ -32,8 +32,7 @@ export const LinksContainer = styled.nav`
   @media ${device.menuTablet}{
     flex-direction: column;
     align-items: flex-start;
-    transform: translateX(20px);
-    margin: 100px 0 40px 0;
+    margin: 100px 0 40px -20px;
   } 
   @media (max-height: 450px) AND ${device.mobile}{
     margin: 100px 0 20px 0;
@@ -41,7 +40,9 @@ export const LinksContainer = styled.nav`
   @media ${device.menuMobile}{
     align-items: center;
     justify-content: center;
-    transform: translateX(0px);
+  }
+  @media ${device.mobile}{
+    margin: 100px 0 40px 0px;
   }
 `
 
@@ -76,7 +77,6 @@ export const divMenu = styled.div.attrs((props: {active: boolean}) => props)`
     position: fixed;
     justify-content: fle-end;
     align-items: center;
-    z-index: -10;
     top: 0%;
     left: 0;
     transform: translateX(${((props) => props.active  ? "0" : "100%")});
@@ -116,15 +116,20 @@ export const MenuContentContainer = styled.div`
     width: 35vw;
     height: 100%;
     min-width: 350px;
-    padding: 0 25px;
+    padding-left: 50px;
     border-left: 1px solid ${colors.lightGray};
     flex-direction: column; 
     justify-content: flex-start;
+    align-items: flex-start;
     background: ${colors.white};
   }
   @media ${device.menuMobile}{
     min-width: 0;
     width: 100%;
+  }
+  @media ${device.mobile}{
+    padding: 0 25px;
+    align-items: center;
   }
 `
 

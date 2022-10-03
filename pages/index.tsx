@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Content } from "./components/content/Content";
+import AboutSection from "./components/content/aboutSection/AboutSection";
+import { Content } from "./components/content/messageSection/Content";
+import WelcomeSection from "./components/content/welcomeSection/WelcomeSection";
 import { Menu } from "./components/menu/Menu";
 
 const Home: NextPage = () => {
@@ -14,6 +16,8 @@ const Home: NextPage = () => {
 
       <main>
         <Menu />
+        <WelcomeSection />
+        <AboutSection />
         <Content />
       </main>
     </div>

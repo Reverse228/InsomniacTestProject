@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import ContentImg from "../../../public/images/contentImg.png";
+import ContentImg from "../../../../public/images/contentImg.png";
 import * as S from "./styled";
 
 export const Content = () => {

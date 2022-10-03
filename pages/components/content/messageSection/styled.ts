@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, device} from "../../../styles/globalStyled";
+import { colors, device} from "../../../../styles/globalStyled";
 
 export const Main = styled.div`
   width: 100%;
@@ -12,8 +12,8 @@ export const Main = styled.div`
   @media ${device.mobile}{
     grid-template-columns: minmax(12px, 1fr) 445px minmax(12px, 1fr);  
   }
-  @media ${device.menuTablet}{
-    margin-top: 93px;
+  @media (max-width: 475px){
+    grid-template-columns: minmax(12px, 1fr) 310px minmax(12px, 1fr);  
   }
 `
 export const Content = styled.div`
@@ -162,6 +162,11 @@ export const LeftDecor = styled.div`
   }
   @media ${device.mobile}{
     min-width: 12px;
+    height: 528.5px;
+  }
+  @media (max-width: 475px){
+    transform: translateY(100.5px);
+    height: 338.5px;
   }
 `
 export const RightDecor = styled.div`
@@ -173,5 +178,8 @@ export const RightDecor = styled.div`
   z-index: -10;
   @media ${device.mobile}{
     min-width: 12px;
+  }
+  @media (max-width: 475px){
+     display: none;
   }
 `
