@@ -11,8 +11,8 @@ export const colors = {
 }
 
 export const device = {
-  menuTablet: `(max-width: 1250px)`,
-  menuMobile: `(max-width: 350px)`,
+  menuTablet: `(max-width: 1456px)`,
+  menuMobile: `(max-width: 532px)`,
   tablet: `(max-width: 1100px)`,
   mobile: `(max-width: 768px)`
 }

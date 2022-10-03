@@ -10,7 +10,7 @@ export const Main = styled.div`
     grid-template-columns: 1fr minmax(308px, 769px) 1fr;
   }
   @media ${device.mobile}{
-    grid-template-columns: 1fr 2fr;  
+    grid-template-columns: minmax(12px, 1fr) 445px minmax(12px, 1fr);  
   }
   @media ${device.menuTablet}{
     margin-top: 93px;
@@ -45,7 +45,11 @@ export const ContactContainer = styled.div`
   grid-template-rows: auto 1fr;
   z-index: 1;
   @media ${device.tablet}{
-    max-width: 301px;
+    max-width: 324px;
+  }
+  @media ${device.mobile}{
+    max-width: 445px;
+    width: 100%;
   }
 `
 
@@ -65,6 +69,7 @@ export const Contact = styled.div`
     padding: 50px 40px;
   }
   @media ${device.mobile}{
+    width: 100%;
     padding: 50px 20px;
   }
 `
@@ -105,12 +110,11 @@ export const Info = styled.div`
   min-width: 310px;
   grid-area: b;
   @media ${device.tablet}{
-    padding: 70px 60px
+    padding: 70px 60px;
   }
   @media ${device.mobile}{
-    width: 301px;
-    min-width: 301px;
-    padding: 50px 20px
+    max-width: 445px;
+    padding: 50px 20px;
   }
 `
 export const InfoSpace = styled.div`
@@ -154,7 +158,7 @@ export const LeftDecor = styled.div`
   min-width: 36px;
   transform: translateY(101px);
   @media ${device.tablet}{
-    height: 326.5px;
+    height: 358.5px;
   }
   @media ${device.mobile}{
     min-width: 12px;
@@ -168,6 +172,6 @@ export const RightDecor = styled.div`
   height: 380px;
   z-index: -10;
   @media ${device.mobile}{
-    display: none;
+    min-width: 12px;
   }
 `

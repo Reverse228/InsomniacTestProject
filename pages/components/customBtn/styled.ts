@@ -1,7 +1,7 @@
 import styled from "styled-components";
  
 export const a = styled.a`
-  padding: 15px 20px;
+  padding: 12px 24px;
   background: #E76ECE;
   color: #FFFFFF;
   font-size: 16px;

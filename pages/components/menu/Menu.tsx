@@ -34,6 +34,7 @@ export const Menu: FC = () => {
       </Link>
       <S.divMenu active={burgerState}>
         <S.MenuExit
+          active={burgerState}
           onClick={() => {
             setBurgerState(false);
           }}
