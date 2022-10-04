@@ -3,7 +3,7 @@ import React from "react";
 import * as S from "./styled";
 import WelcomeImage from "../../../../public/images/welcomeImage.png";
 
-const WelcomeSection = () => (
+export const WelcomeSection = () => (
   <S.Main>
     <S.Content>
       <S.TextPart>
@@ -17,5 +17,3 @@ const WelcomeSection = () => (
     </S.Content>
   </S.Main>
 );
-
-export default WelcomeSection;

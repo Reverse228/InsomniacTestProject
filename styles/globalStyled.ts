@@ -8,7 +8,8 @@ export const colors = {
   green: "#8DC63F",
   white: "white",
   lightGray: "#F0F0F0",
-  red: "#D84E30"
+  red: "#D84E30",
+  mediumBlue: "#266299"
 }
 
 export const widths = {
@@ -18,6 +19,7 @@ export const widths = {
 export const device = {
   menuTablet: `(max-width: 1490px)`,
   menuMobile: `(max-width: 532px)`,
-  tablet: `(max-width: 1100px)`,
-  mobile: `(max-width: 768px)`
+  tablet: `(max-width: 1680px)`,
+  mobile: `(max-width: 768px)`,
+  minMobile: `(max-width: 475px)`
 }

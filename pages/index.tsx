@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import AboutSection from "./components/content/aboutSection/AboutSection";
-import { Content } from "./components/content/messageSection/Content";
-import WelcomeSection from "./components/content/welcomeSection/WelcomeSection";
+import { AboutSection } from "./components/content/aboutSection/AboutSection";
+import { AddMessageInfo } from "./components/content/addMessageInfo/AddMessageInfo";
+import { KnowledgeSection } from "./components/content/knowledgeSection/KnowledgeSection";
+import { MessageSection } from "./components/content/messageSection/MessageSection";
+import { WelcomeSection } from "./components/content/welcomeSection/WelcomeSection";
 import { Menu } from "./components/menu/Menu";
 
 const Home: NextPage = () => {
@@ -18,7 +20,9 @@ const Home: NextPage = () => {
         <Menu />
         <WelcomeSection />
         <AboutSection />
-        <Content />
+        <MessageSection />
+        <AddMessageInfo />
+        {/* <KnowledgeSection /> */}
       </main>
     </div>
   );

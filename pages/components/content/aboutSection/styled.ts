@@ -16,7 +16,7 @@ export const Main = styled.div`
   @media ${device.mobile}{
     grid-template-columns: minmax(12px, 1fr) 445px minmax(12px, 1fr);  
   }
-  @media (max-width: 475px){
+  @media ${device.minMobile}{
     grid-template-columns: minmax(12px, 1fr) 310px minmax(0px, 1fr); 
     background: none;
   }

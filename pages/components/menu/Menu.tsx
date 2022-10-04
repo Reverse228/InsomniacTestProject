@@ -28,9 +28,9 @@ export const Menu: FC = () => {
   return (
     <S.divMain>
       <Link href="#">
-        <a href="">
+        <S.LogoLink>
           <Image src={Logo} />
-        </a>
+        </S.LogoLink>
       </Link>
       <S.divMenu active={burgerState}>
         <S.MenuExit
@@ -68,7 +68,7 @@ export const Menu: FC = () => {
         }}
       >
         <S.BurgerBox className="hamburger-box">
-          <S.BurgerInner className="hamburger-inner" />
+          <S.BurgerInner className="hamburger-inner" active={burgerState} />
         </S.BurgerBox>
       </S.Burger>
     </S.divMain>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import ContentImg from "../../../../public/images/contentImg.png";
 import * as S from "./styled";
 
-export const Content = () => {
+export const MessageSection = () => {
   return (
     <S.Main>
       <S.LeftDecor />

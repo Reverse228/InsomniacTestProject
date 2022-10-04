@@ -62,12 +62,26 @@ export const divMain = styled.header`
   @media ${device.menuTablet}{
     position: fixed;
     z-index: 10;
+    max-height: 72px;
     padding: 10px 21px 10px 36px;
   }
   @media ${device.menuMobile}{
+    max-height: 52px;
     padding: 10px 5%;
   }
 `
+export const LogoLink = styled.a`
+  height: 68px;
+  @media ${device.menuTablet}{
+    width: 80px;
+    height: 52px;
+  }
+  @media ${device.menuMobile}{
+    width: 58px;
+    height: 38px;
+  }
+`
+
 export const divMenu = styled.div.attrs((props: {active: boolean}) => props)`
   display: flex;
   justify-content: space-between;
@@ -146,12 +160,12 @@ export const BurgerBox = styled.span`
   align-items: center;
 `
 
-export const BurgerInner = styled.span`
-  width: 25px;
+export const BurgerInner = styled.span.attrs((props: {active: boolean}) => props)`
+  width: 20px;
   height: 2px;
   background-color: ${colors.secondGray};
   &:after, &:before {
-    width: 25px;
+    width: 20px;
     height: 2px;
     background-color: ${colors.secondGray};
   }

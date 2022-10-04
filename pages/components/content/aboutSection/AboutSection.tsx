@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./styled";
 
-const AboutSection = () => (
+export const AboutSection = () => (
   <S.Main>
     <div />
     <S.Content>
@@ -27,5 +27,3 @@ const AboutSection = () => (
     <div />
   </S.Main>
 );
-
-export default AboutSection;
