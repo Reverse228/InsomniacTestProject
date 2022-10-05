@@ -1,12 +1,15 @@
 import styled from "styled-components";
-import { colors } from "../../../../../../styles/globalStyled";
+import { colors, device, widths } from "../../../../../styles/globalStyled";
 
 export const Main = styled.div`
-  width: 1200px;
+  width: ${widths.standart};
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: row;
+  @media ${device.tablet}{
+    max-width: ${widths.tablet}
+  }
 `
 
 export const Name = styled.h3`
@@ -15,6 +18,11 @@ export const Name = styled.h3`
   line-height: 40px;
   max-width: 343px;
   margin: 0;
+  @media ${device.tablet}{
+    max-width: 296px;
+    font-size: 28px;
+    line-height: 36px;
+  }
 `
 
 export const InfoContainer = styled.div`
@@ -23,6 +31,9 @@ export const InfoContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media ${device.tablet}{
+    max-width: 336px;
+  }
 `
 
 export const Quotation = styled.p`
@@ -31,6 +42,10 @@ export const Quotation = styled.p`
   font-size: 22px;
   line-height: 33px;
   margin: 0;
+  @media ${device.tablet}{
+    font-size: 18px;
+    line-height: 27px;
+  }
 `
 
 export const Text = styled.p`
@@ -38,4 +53,8 @@ export const Text = styled.p`
   font-size: 18px;
   line-height: 27px;
   margin: 30px 0 0 0;
+  @media ${device.tablet}{
+    font-size: 16px;
+    line-height: 24px;
+  }
 `

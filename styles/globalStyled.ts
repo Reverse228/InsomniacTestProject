@@ -9,11 +9,17 @@ export const colors = {
   white: "white",
   lightGray: "#F0F0F0",
   red: "#D84E30",
-  mediumBlue: "#266299"
+  decorRed: "#E75228",
+  decorYellow: "#FBB316",
+  decorGreen: "#84BF42",
+  mediumBlue: "#266299",
+  orange: "#F37E26",
+  decorGray: "#E1E3E8"
 }
 
 export const widths = {
-  standart: "1200px"
+  standart: "1200px",
+  tablet: "769px"
 }
 
 export const device = {

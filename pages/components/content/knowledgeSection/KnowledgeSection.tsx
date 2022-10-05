@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { ContentPart } from "./components/contentPart/ContentPart";
-import { InfoPart } from "./components/infoPart/InfoPart";
+import { ContentPart } from "./contentPart/ContentPart";
+import { InfoPart } from "./infoPart/InfoPart";
 import { Props } from "./Knowledge";
 import { timeLineBtns } from "./mockData";
 import * as S from "./styled";
 
 export const KnowledgeSection = () => {
-  const [btnState, setBtnState] = useState<number>(0);
+  const [btnState, setBtnState] = useState<number>(1);
 
   return (
     <S.Main>
@@ -30,7 +30,7 @@ export const KnowledgeSection = () => {
           </S.BtnContainer>
         ))}
       </S.TimeLine>
-      {/* <ContentPart slideId={btnState} /> */}
+      <ContentPart slideId={btnState} />
     </S.Main>
   );
 };

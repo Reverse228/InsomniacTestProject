@@ -6,6 +6,7 @@ import { Props } from "./Content";
 import { data } from "./mockData";
 
 import * as S from "./styled";
+import { BtnMore } from "../../../btnMore/BtnMore";
 
 export const ContentPart: FC<Props> = ({ slideId }) => {
   return (
@@ -24,10 +25,20 @@ export const ContentPart: FC<Props> = ({ slideId }) => {
                   <strong>{textName}</strong>
                   {text}
                 </S.Text>
-                <S.BtnContainer>
-                  <S.BtnText>Read More</S.BtnText>
-                </S.BtnContainer>
+                <BtnMore text={"READ MORE"} href={link} />
               </S.TextPart>
+              <S.ImagePart>
+                <S.ImageContent>
+                  <S.ImageHeader>
+                    <S.Decor />
+                    <S.Decor />
+                    <S.Decor />
+                  </S.ImageHeader>
+                  <S.ImageContentContainer>
+                    <Image src={contentImg} />
+                  </S.ImageContentContainer>
+                </S.ImageContent>
+              </S.ImagePart>
             </S.Content>
           )
       )}

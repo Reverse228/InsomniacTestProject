@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <AboutSection />
         <MessageSection />
         <AddMessageInfo />
-        {/* <KnowledgeSection /> */}
+        <KnowledgeSection />
       </main>
     </div>
   );

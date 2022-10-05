@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../../../styles/globalStyled";
+import { colors, device, widths } from "../../../../styles/globalStyled";
 import KnowledgeImage from "../../../../public/images/KnowledgeImage.png" 
 
 export const Main = styled.div`
@@ -19,12 +19,15 @@ export const Main = styled.div`
 `
 
 export const TimeLine = styled.div`
-  width: 1200px;
+  width: ${widths.standart};
   margin-top: 80px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: row;
+  @media ${device.tablet}{
+    width: 88.5%;
+  }
 `
 
 export const BtnContainer = styled.div`
@@ -63,7 +66,8 @@ export const Line = styled.div.attrs((props: {last: boolean , first : boolean, a
     content: "";
     position: absolute;
     width: ${((props) => props.last  ? "25%" : "0")};
-    height: 1px;
+    height: 0.5px;
+    border: 1px solid transparent;
     left: 100%;
     background: ${colors.white};
   }
@@ -72,6 +76,7 @@ export const Line = styled.div.attrs((props: {last: boolean , first : boolean, a
     position: absolute;
     width: ${((props) => props.first  ? "25%" : "0")};
     height: 0.5px;
+    border: 1px solid transparent;
     opacity: 0.3;
     left: -25%;
     background: ${colors.white};
@@ -92,4 +97,8 @@ export const BtnText = styled.p`
   font-size: 18px;
   line-height: 27px;
   margin: 16px 0 0 0;
+  @media ${device.tablet}{
+    font-size: 16px;
+    line-height: 24px;
+  }
 `

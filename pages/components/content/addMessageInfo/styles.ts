@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../../../styles/globalStyled";
+import { colors, device } from "../../../../styles/globalStyled";
 
 export const Main = styled.div`
   width: 100%;
@@ -21,17 +21,34 @@ export const Main = styled.div`
   }
 `
 
-export const ImageContainer = styled.div`
-  margin-top: 10px;
-  @media ${device.tablet}{
-    width: 35px;
-    height: 35px;
-    margin-top: 5px;
+export const AddBtn = styled.div.attrs((props: {active: boolean}) => props)`
+  width: 50px;
+  height: 50px;
+  background: ${colors.orange};
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:before{
+    content: "";
+    position: absolute; 
+    transition: 0.2s;
+    width: ${(props => props.active ? "20" : "26")}px;
+    height: 2.5px;
+    background: ${colors.white};
+    border-radius: 10px;
   }
-  @media ${device.mobile}{
-    width: 30px;
-    height: 30px;
-    margin: 0;
+  &:after{
+    content: "";
+    position: absolute; 
+    width: ${(props => props.active ? "20" : "26")}px;
+    height: 2.5px;
+    background: ${colors.white};
+    border-radius: 10px;
+    transition: 0.2s;
+    transform: rotate(${(props => props.active ? "180" : "90")}deg);
   }
 `
 
