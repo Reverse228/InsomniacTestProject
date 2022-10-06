@@ -10,12 +10,18 @@ export const Main = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 120px 0;
+  padding: 120px 36px;
   margin-top: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media ${device.tablet}{
+    padding: 70px 36px;
+  }
+  @media ${device.tablet}{
+    padding: 50px 2px 25px 12px;
+  }
 `
 
 export const TimeLine = styled.div`
@@ -27,7 +33,10 @@ export const TimeLine = styled.div`
   flex-direction: row;
   @media ${device.tablet}{
     width: 88.5%;
-  }
+  };
+  @media ${device.mobile}{
+    display: none;
+  };
 `
 
 export const BtnContainer = styled.div`

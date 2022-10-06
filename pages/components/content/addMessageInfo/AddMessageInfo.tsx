@@ -20,6 +20,7 @@ export const AddMessageInfo = () => {
             btnState ? data.split(" ").length : data.split(" ").length / 2
           )
           .join(" ")}
+        {!btnState && "..."}
       </S.Text>
     </S.Main>
   );
