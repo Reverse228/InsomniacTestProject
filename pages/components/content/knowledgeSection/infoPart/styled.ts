@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors, device, widths } from "../../../../../styles/globalStyled";
 
 export const Main = styled.div`
-  max-width: ${widths.standart};
+  max-width: ${widths.standard};
   display: flex;
   align-items: flex-start;
   justify-content: space-between;

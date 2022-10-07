@@ -1,20 +1,16 @@
 import { FC } from "react";
-import Image from "next/image";
 import Link from "next/link";
-
-import ArrowSvg from "../../../public/svg/arrowSvg.svg";
 
 import { Props } from "./BtnMore.d";
 
 import * as S from "./styled";
+import { ArrowSvg } from "../../../public/svg/ArrowSvg";
 
-export const BtnMore: FC<Props> = ({ text, href, $padding }) => (
+export const BtnMore: FC<Props> = ({ text, href, $color }) => (
   <Link href={href}>
-    <S.Link $padding="15px 25px 15px 0">
+    <S.Link $padding="15px 25px 15px 0" $color={$color ? $color : "white"}>
       {text}
-      <S.ImageContainer>
-        <Image src={ArrowSvg} />
-      </S.ImageContainer>
+      <ArrowSvg $color={$color} />
     </S.Link>
   </Link>
 );

@@ -4,6 +4,7 @@ import { AboutSection } from "./components/content/aboutSection/AboutSection";
 import { AddMessageInfo } from "./components/content/addMessageInfo/AddMessageInfo";
 import { KnowledgeSection } from "./components/content/knowledgeSection/KnowledgeSection";
 import { MessageSection } from "./components/content/messageSection/MessageSection";
+import { SpaceSection } from "./components/content/spaceSection/SpaceSection";
 import { WelcomeSection } from "./components/content/welcomeSection/WelcomeSection";
 import { Menu } from "./components/menu/Menu";
 
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
         <MessageSection />
         <AddMessageInfo />
         <KnowledgeSection />
+        <SpaceSection />
       </main>
     </div>
   );

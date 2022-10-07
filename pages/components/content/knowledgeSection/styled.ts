@@ -25,14 +25,14 @@ export const Main = styled.div`
 `
 
 export const TimeLine = styled.div`
-  width: ${widths.standart};
+  width: ${widths.standard};
   margin-top: 80px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: row;
   @media ${device.tablet}{
-    width: 88.5%;
+    width: calc(100% - 105px);
   };
   @media ${device.mobile}{
     display: none;
@@ -89,6 +89,12 @@ export const Line = styled.div.attrs((props: {last: boolean , first : boolean, a
     opacity: 0.3;
     left: -25%;
     background: ${colors.white};
+  }
+
+  @media ${device.tablet}{
+    &:after{
+      width: ${((props) => props.last  ? "50px" : "0")};
+    }
   }
 `
 

@@ -23,7 +23,7 @@ export const Main = styled.div`
 `
 
 export const Content = styled.div`
-  max-width: ${widths.standart};
+  max-width: ${widths.standard};
   display: flex;
   justify-content: center;
   align-items: center;

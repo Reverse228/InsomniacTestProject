@@ -16,7 +16,7 @@ export const Main = styled.div`
 `
 
 export const Content = styled.div`
-  width: ${widths.standart};
+  width: ${widths.standard};
   margin: 0 36px;
   min-width: 769px;
   display: flex;

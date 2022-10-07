@@ -1,5 +1,6 @@
 export type StyledProps  = {
   $padding?: string;
+  $color?: string
 }
 
 export type Props = StyledProps & {

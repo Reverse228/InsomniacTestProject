@@ -6,7 +6,8 @@ export const colors = {
   gray: "#EFF9FD",
   secondGray: "#323232",
   green: "#8DC63F",
-  white: "white",
+  white: "#FFFFFF",
+  maxLightGray: "#FAFAFA",
   lightGray: "#F0F0F0",
   red: "#D84E30",
   decorRed: "#E75228",
@@ -18,7 +19,7 @@ export const colors = {
 }
 
 export const widths = {
-  standart: "1200px",
+  standard: "1200px",
   tablet: "769px"
 }
 

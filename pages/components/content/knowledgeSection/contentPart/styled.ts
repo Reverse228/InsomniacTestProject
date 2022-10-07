@@ -16,7 +16,7 @@ export const Main = styled.div`
 `
 
 export const Content = styled.div`
-  width: ${widths.standart};
+  width: ${widths.standard};
   display: flex;
   justify-content: space-between;
   align-items: center;
