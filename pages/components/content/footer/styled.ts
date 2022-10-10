@@ -60,12 +60,22 @@ export const Name = styled.h3`
   font-weight: 400;
   font-size: 28px;
   line-height: 42px;
+
+  @media ${device.tablet}{
+    font-size: 28px;
+    line-height: 36px;
+  }
 `
 
 export const Text = styled.p`
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
+
+  @media ${device.tablet}{
+    font-size: 16px;
+    line-height: 24px;
+  }
 `
 
 export const BottomInfo = styled.div`
