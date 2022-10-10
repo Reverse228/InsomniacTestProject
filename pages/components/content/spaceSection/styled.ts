@@ -53,6 +53,29 @@ export const Content = styled.div`
       width: calc(${widths.tablet} - 190px);
     }
   }
+
+  @media ${device.mobile}{
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    position: relative;
+    margin: 0px;
+    padding: 36px 0px;
+
+    &::before{
+      transform: translateY(145px);
+      width: 100%;
+      height: 75%;
+    }
+    &::after{
+      display: none;
+    }
+  }
+
+  
 `
 
 export const TextContainer = styled.div`
@@ -64,6 +87,11 @@ export const TextContainer = styled.div`
 
   @media ${device.tablet}{
     max-width: 336px;
+  }
+  @media ${device.mobile}{
+    max-width: 100%;
+    margin: 55px 12px 0 12px;
+
   }
 `
 

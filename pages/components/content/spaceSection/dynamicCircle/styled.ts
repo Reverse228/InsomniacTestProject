@@ -23,6 +23,11 @@ export const Main = styled.div`
     width: 320px;
     height: 320px;
   }
+  
+  @media ${device.mobile}{
+    width: 290px;
+    height: 290px;
+  }
 `
 
 export const BigCircle = styled.div<StyledProps>`
@@ -79,9 +84,14 @@ export const Content = styled.div`
   flex-direction: column;
 `
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.div<StyledProps>`
   position: relative;
   margin-bottom: 17px;
+  width: 80px; 
+
+  & svg circle{
+      fill: ${({$color}) => $color};
+  }
 
   @media ${device.tablet}{
     width: 40px;

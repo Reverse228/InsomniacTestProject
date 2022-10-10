@@ -2,9 +2,12 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { AboutSection } from "./components/content/aboutSection/AboutSection";
 import { AddMessageInfo } from "./components/content/addMessageInfo/AddMessageInfo";
+import { AddMessageInfoBottom } from "./components/content/addMessageInfoBottom/AddMessageInfoBottom";
+import { Footer } from "./components/content/footer/Footer";
 import { KnowledgeSection } from "./components/content/knowledgeSection/KnowledgeSection";
 import { MessageSection } from "./components/content/messageSection/MessageSection";
 import { SpaceSection } from "./components/content/spaceSection/SpaceSection";
+import { TheIDS } from "./components/content/theIDS/TheIDS";
 import { WelcomeSection } from "./components/content/welcomeSection/WelcomeSection";
 import { Menu } from "./components/menu/Menu";
 
@@ -25,6 +28,9 @@ const Home: NextPage = () => {
         <AddMessageInfo />
         <KnowledgeSection />
         <SpaceSection />
+        <TheIDS />
+        <AddMessageInfoBottom />
+        <Footer />
       </main>
     </div>
   );

@@ -9,11 +9,11 @@ export const DynamicCircle: FC<Props> = ({ slideId, $color }) => (
     <S.BigCircle $color={$color}>
       <S.ContentCircle $color={$color}>
         {data.map(
-          ({ id, name, image }) =>
+          ({ id, name, Image }) =>
             slideId === id && (
               <S.Content key={id}>
-                <S.ImageContainer key={id}>
-                  <Image src={image} />
+                <S.ImageContainer $color={$color}>
+                  <Image />
                 </S.ImageContainer>
                 <S.Text>{name}</S.Text>
                 <S.Text>{id} / 12</S.Text>
