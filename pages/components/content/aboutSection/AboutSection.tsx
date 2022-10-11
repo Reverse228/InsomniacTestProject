@@ -3,7 +3,6 @@ import * as S from "./styled";
 
 export const AboutSection = () => (
   <S.Main>
-    <div />
     <S.Content>
       <S.Title>
         <S.H3>ABOUT</S.H3>
@@ -24,6 +23,5 @@ export const AboutSection = () => (
         </S.Description>
       </S.Info>
     </S.Content>
-    <div />
   </S.Main>
 );

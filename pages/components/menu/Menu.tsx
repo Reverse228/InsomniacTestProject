@@ -2,14 +2,23 @@ import { useState, FC, useEffect } from "react";
 import Image from "next/image";
 import Logo from "../../../public/images/logo.png";
 import { data } from "./mockData";
-import { Props } from "./Menu.d";
 import * as S from "./styled";
 import { LinkCustom } from "../customBtn/CustomBtn";
 import Link from "next/link";
+import { useMediaQuery } from "../../../hooks/useMediaQuery";
 
 export const Menu: FC = () => {
   const [linkState, setLinkState] = useState<number>(0);
   const [burgerState, setBurgerState] = useState<boolean>(false);
+  const mediaQuery = useMediaQuery(1490);
+
+  useEffect(() => {
+    document.body.style.overflow = burgerState ? "hidden" : "auto";
+
+    if (!mediaQuery) {
+      setBurgerState(false);
+    }
+  }, [burgerState, mediaQuery]);
 
   useEffect(() => {
     const keyDownHandler = (event: any) => {
@@ -32,20 +41,20 @@ export const Menu: FC = () => {
           <Image src={Logo} />
         </S.LogoLink>
       </Link>
-      <S.divMenu active={burgerState}>
+      <S.divMenu $active={burgerState}>
         <S.MenuExit
-          active={burgerState}
+          $active={burgerState}
           onClick={() => {
             setBurgerState(false);
           }}
         />
         <S.MenuContentContainer>
           <S.LinksContainer>
-            {data.map(({ id, name, link }: Props) => {
+            {data.map(({ id, name, link }) => {
               return (
                 <S.menuLink
                   key={id}
-                  active={linkState === id}
+                  $active={linkState === id}
                   onClick={() => {
                     setLinkState(id);
                   }}
@@ -68,7 +77,7 @@ export const Menu: FC = () => {
         }}
       >
         <S.BurgerBox className="hamburger-box">
-          <S.BurgerInner className="hamburger-inner" active={burgerState} />
+          <S.BurgerInner className="hamburger-inner" />
         </S.BurgerBox>
       </S.Burger>
     </S.divMain>

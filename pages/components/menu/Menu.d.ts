@@ -1,5 +1,3 @@
-export type Props = {
-    id: number;
-    name: string;
-    link?: string;
+export type StyledProps = {
+	$active?: boolean
 }
