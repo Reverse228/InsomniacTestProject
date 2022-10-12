@@ -1,25 +1,26 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import CustomBtn from '../pages/components/customBtn/CustomBtn';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { LinkCustom } from "../components/LinkCustom/LinkCustom";
 
 export default {
-  title: 'Example/Button',
-  component: CustomBtn,
+  title: "Example/Button",
+  component: LinkCustom,
 
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
   },
-} as ComponentMeta<typeof CustomBtn>;
+} as ComponentMeta<typeof LinkCustom>;
 
-const Template: ComponentStory<typeof CustomBtn> = (args) => <CustomBtn {...args} />;
+const Template: ComponentStory<typeof LinkCustom> = (args) => (
+  <LinkCustom {...args} />
+);
 
 export const Standart = Template.bind({});
 Standart.args = {
-  text: "DOWNLOAD PDF"
-}; 
+  text: "DOWNLOAD PDF",
+};
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  text: "DOWNLOAD PDF"
+  text: "DOWNLOAD PDF",
 };
-

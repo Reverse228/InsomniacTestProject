@@ -1,15 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { AboutSection } from "./components/content/aboutSection/AboutSection";
-import { AddMessageInfo } from "./components/content/addMessageInfo/AddMessageInfo";
-import { AddMessageInfoBottom } from "./components/content/addMessageInfoBottom/AddMessageInfoBottom";
-import { Footer } from "./components/content/footer/Footer";
-import { KnowledgeSection } from "./components/content/knowledgeSection/KnowledgeSection";
-import { MessageSection } from "./components/content/messageSection/MessageSection";
-import { SpaceSection } from "./components/content/spaceSection/SpaceSection";
-import { TheIDS } from "./components/content/theIDS/TheIDS";
-import { WelcomeSection } from "./components/content/welcomeSection/WelcomeSection";
-import { Menu } from "./components/menu/Menu";
+import { AboutSection } from "../components/content/AboutSection/AboutSection";
+import { AddCascadeMessage } from "../components/content/AddCascadeMessageSection/AddCascadeMessage";
+import { AddMessage } from "../components/content/AddMessageSection/AddMessage";
+import { Footer } from "../components/content/Footer/Footer";
+import { KnowledgeSection } from "../components/content/IDSKnowledgeSection/IDSKnowledge";
+import { IDSMessage } from "../components/content/IDSMessageSection/IDSMessage";
+import { SpaceSection } from "../components/content/SpaceSection/SpaceSection";
+import { IDS } from "../components/content/IDSSection/ IDS";
+import { WelcomeSection } from "../components/content/WelcomeSection/WelcomeSection";
+import { Menu } from "../components/Menu/Menu";
 
 const Home: NextPage = () => {
   return (
@@ -24,12 +24,12 @@ const Home: NextPage = () => {
         <Menu />
         <WelcomeSection />
         <AboutSection />
-        <MessageSection />
-        <AddMessageInfo />
+        <IDSMessage />
+        <AddCascadeMessage />
         <KnowledgeSection />
         <SpaceSection />
-        <TheIDS />
-        <AddMessageInfoBottom />
+        <IDS />
+        <AddMessage />
         <Footer />
       </main>
     </div>
