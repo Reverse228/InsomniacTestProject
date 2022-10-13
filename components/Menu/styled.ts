@@ -3,11 +3,12 @@ import { colors, device } from "../../styles/globalVariables";
 import { StyledProps } from "./Menu.d";
 
 export const Link = styled.a<StyledProps>`
-  margin: 0 50px;
+  margin: 0 40px;
   cursor: pointer;
   padding: 10px 20px;
   font-size: 16px;
   transition: 0.2s;
+  text-transform: uppercase;
   color: ${(({$active}) => $active  ? colors.pink : colors.black)};
 
   @media ${device.tablet} {
@@ -37,19 +38,19 @@ export const LinksContainer = styled.nav`
 `
 
 export const Main = styled.header`
+  position: fixed;
   width: 100vw;
-  padding: 10px 60px;
+  padding: 20px 60px;
   border-bottom: 1px solid ${colors.lightGray};
   z-index: 10;
   background: white;
   display: flex;
+  left: 0;
+  top: 0;
   justify-content: space-between;
   @media ${device.tablet}{
-    position: fixed;
     align-items: center;
-    left: 0;
-    top: 0;
-    padding: 10px 21px 10px 36px;
+    padding: 8px 21px 8px 36px;
   }
   @media ${device.mobile}{
     max-height: 52px;
@@ -57,7 +58,7 @@ export const Main = styled.header`
   }
 `
 export const LogoLink = styled.a`
-  height: 68px;
+  height: 69px;
   @media ${device.tablet}{
     width: 80px;
     height: 52px;
@@ -71,7 +72,7 @@ export const LogoLink = styled.a`
 export const Menu = styled.div<StyledProps>`
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 85%;
 
   @media ${device.tablet}{
     position: fixed;
@@ -88,7 +89,7 @@ export const Backdrop = styled.div<StyledProps>`
   
   @media ${device.tablet} {
     display: inline;
-    width: 70vw;
+    width: 65vw;
     height: 100%;
     transition: 0.3s;
     backdrop-filter: blur(${(({$active}) => $active  ? "5px" : "0")});
@@ -109,8 +110,8 @@ export const MenuContent = styled.div`
   justify-content: end;
 
   @media ${device.tablet} {
-    width: 30vw;
-    min-width: 350px;
+    width: 35vw;
+    min-width: 400px;
     height: 100%;
     padding: 0 25px 0 50px;
     align-items: start;
@@ -145,7 +146,12 @@ export const Burger = styled.button`
 export const BurgerBox = styled.span`
   display: flex;
   justify-content: center;
+
+  @media ${device.mobile}{
+    padding-right: 0px;
+  }
 `
+
 export const BurgerInner = styled.span`
   width: 20px;
   height: 2px;

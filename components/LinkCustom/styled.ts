@@ -9,5 +9,5 @@ export const a = styled.a`
   cursor: pointer;
   display: flex;
   justify-content: center;
-  align-items: center;
+  text-align: center;
 `;

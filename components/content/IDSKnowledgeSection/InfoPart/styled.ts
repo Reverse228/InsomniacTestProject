@@ -20,7 +20,7 @@ export const Name = styled.h3`
   font-size: 32px;
   line-height: 40px;
   max-width: 343px;
-  margin: 0 227px 0 0 ;
+  margin: 0  ;
   @media ${device.tablet}{
     font-size: 28px;
     margin: 0 64px 0 0 ;

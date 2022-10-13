@@ -1,6 +1,26 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { colors, device, widths } from "../../../../styles/globalVariables";
 import ImagePartBg from "../../../../public/images/ImagePartBg.png";
+
+const appearEl = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`
+
+const appearImg = keyframes`
+from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
 
 export const Main = styled.div`
   width: 100%;
@@ -43,10 +63,23 @@ export const TextPart = styled.div`
     max-width: 100%;
     margin-bottom: 20px;
   }
+
+  & a {
+    opacity: 0;
+  animation: ${appearEl};
+  animation-duration: 0.8s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  }
 `
 
 export const ImageContainer = styled.div`
   position: relative;
+  opacity: 0;
+  animation: ${appearEl};
+  animation-duration: 0.8s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
   @media ${device.tablet} {
     width: 60px;
     height: 60px;
@@ -59,6 +92,11 @@ export const Title = styled.h3`
   font-size: 32px;
   line-height: 40px;
   margin-top: 36px;
+  opacity: 0;
+  animation: ${appearEl};
+  animation-duration: 0.8s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
   @media ${device.tablet} {
     font-size: 28px;
     line-height: 36px;
@@ -75,6 +113,11 @@ export const Subtitle = styled.h4`
   font-size: 24px;
   line-height: 28px;
   margin: 17px 0 0 0;
+  opacity: 0;
+  animation: ${appearEl};
+  animation-duration: 0.8s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
   @media ${device.tablet} {
     font-size: 18px;
     line-height: 27px;
@@ -87,11 +130,18 @@ export const Text = styled.p`
   font-size: 18px;
   line-height: 27px;
   margin: 17px 0 10px 0;
+  display: flex;
   flex-direction: column;
+  opacity: 0;
+  animation: ${appearEl};
+  animation-duration: 0.8s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
 
   & strong {
     font-size: 18px;
     line-height: 27px;
+    
   }
 
   @media ${device.tablet} {
@@ -175,9 +225,14 @@ export const ImageContentContainer = styled.div`
   & span {
     max-height: 390px;
     min-width: 692px;
+    background: ${colors.decorGray} !important;
     border-radius: 0 0 10px 10px;
 
     & img {
+      opacity: 0;
+      animation: ${appearImg};
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
       object-fit: cover;
     }
   }

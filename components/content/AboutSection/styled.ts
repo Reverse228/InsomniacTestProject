@@ -6,11 +6,9 @@ export const Main = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 120px;
   background: ${colors.lightGray};
   @media ${device.mobile}{
     background: none;
-    margin-bottom: 50px;
   }
 `
 export const Content = styled.div`
@@ -31,8 +29,8 @@ export const Content = styled.div`
       position: absolute;
       left: 0;
       background: ${colors.lightGray};
-      height: 105%;
-      width: 30%;
+      height: calc(100% + 100px);
+      width: 50%;
       z-index: -10;
     }
   }

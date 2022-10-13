@@ -5,9 +5,12 @@ export const Main = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 30px 0 120px 0;
-  @media ${device.menuTablet}{
-    margin-top: 120px;
+  margin: 162px 0 120px 0;
+  @media ${device.tablet}{
+    margin-top: 117px;
+  }
+  @media ${device.mobile}{
+    margin-top: 104px;
   }
 `
 
@@ -54,12 +57,17 @@ export const H1 = styled.h1`
 
 export const H3 = styled.h3`
   font-size: 24px;
+  text-transform: uppercase;
   color: ${colors.pink};
   font-weight: 400;
-  margin-bottom: 40px;
+  margin: 0 0 40px 0;
   @media ${device.tablet}{
     font-size: 16px;
     margin-bottom: 30px;
+  }
+  @media ${device.mobile}{
+    font-size: 16px;
+    margin-bottom: 20px;
   }
 `
 

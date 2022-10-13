@@ -69,6 +69,7 @@ export const ContentCircle = styled.div<StyledProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 50%;
   height: 50%;
   transition: 1s;

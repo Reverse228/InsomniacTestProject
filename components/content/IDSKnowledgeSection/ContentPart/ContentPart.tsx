@@ -1,7 +1,7 @@
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import Image from "next/image";
 
-import { Props } from "./Content";
+import { Props } from "./Content.d";
 
 import { data } from "./mockData";
 

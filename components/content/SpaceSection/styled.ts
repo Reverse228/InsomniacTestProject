@@ -1,5 +1,17 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { colors, device, widths } from "../../../styles/globalVariables";
+
+
+const appearEl = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`
 
 export const Main = styled.div`
   width: 100%;
@@ -19,24 +31,23 @@ export const Content = styled.div`
     content: " ";
     background: ${colors.maxLightGray};
     height: 680px;
+    z-index: -10;
   }
 
   &:before{ 
     width: 50%;
     left: 0;
     transform: translateY(-15%);
-    z-index: -10;
   }
 
   &:after{ 
     width: calc(${widths.standard} - 240px);
     transform: translateY(-15%);
-    z-index: -10;
   }
 
   @media ${device.tablet} {
-    width: ${widths.tablet};
-    min-width: ${widths.tablet};
+    width: calc(${widths.tablet});
+    min-width: calc(${widths.tablet});
     padding: 70px 16px;
     margin: 70px 20px;
     overflow: hidden;
@@ -78,6 +89,14 @@ export const TextContainer = styled.div`
   align-items: flex-start;
   flex-direction: column;
 
+  & a {
+    opacity: 0;
+    animation: ${appearEl};
+    animation-duration: 0.8s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+  }
+
   @media ${device.tablet}{
     max-width: 336px;
   }
@@ -93,6 +112,12 @@ export const Name = styled.h3`
   font-size: 50px;
   line-height: 60px;
   margin: 0;
+  opacity: 0;
+  animation: ${appearEl};
+  animation-duration: 0.8s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+
   @media ${device.tablet}{
     font-size: 30px;
     line-height: 36px;
@@ -104,6 +129,12 @@ export const Text = styled.p`
   font-size: 18px;
   line-height: 27px;
   margin: 20px 0;
+
+  opacity: 0;
+  animation: ${appearEl};
+  animation-duration: 0.8s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
   @media ${device.tablet}{
     font-style: italic;
     font-size: 16px;

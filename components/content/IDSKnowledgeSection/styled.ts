@@ -16,7 +16,7 @@ export const Main = styled.div`
   align-items: center;
   flex-direction: column;
   @media ${device.tablet}{
-    padding: 70px 36px;
+    padding: 70px 0px;
   }
   @media ${device.mobile}{
     padding: 50px 12px 25px 12px;

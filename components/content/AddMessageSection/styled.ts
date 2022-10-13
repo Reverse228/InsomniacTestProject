@@ -23,7 +23,7 @@ export const Content = styled.div`
 
   @media ${device.mobile}{
     width: 100%;
-    margin: 25px 0 25px 12px;
+    margin: 50px 12px ;
     flex-direction: column;
     align-items: flex-start;
   }

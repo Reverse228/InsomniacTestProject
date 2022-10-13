@@ -8,6 +8,7 @@ export const Main = styled.div`
   grid-template-columns: 1fr 445px 755px 1fr; 
   grid-template-rows: auto 1fr; 
   align-items: end;
+  margin-top: 220px;
   gap: 0px 0px; 
 
   &::after{
@@ -20,10 +21,12 @@ export const Main = styled.div`
   }
 
   @media ${device.tablet}{
+    margin-top: 170px;
     grid-template-columns: minmax(32px, 1fr) 324px minmax(0, 455px) minmax(32px, 1fr); 
   }
 
   @media ${device.mobile}{
+    margin-top: 135px;
     grid-template-columns: 12px calc(100% - 12px); 
     grid-template-rows: 1fr auto auto; 
 
@@ -80,6 +83,7 @@ export const Contact = styled.div`
   background: ${colors.green};
   padding: 41px 65px 59px 65px;
   flex-direction: column;
+  height: 100%;
   grid-area: 2 / 2 / 3 / 3;
 
   @media ${device.tablet}{
@@ -125,6 +129,7 @@ export const mail = styled.a`
 export const Info = styled.div`
   background: ${colors.gray};
   grid-area: 1 / 3 / 3 / 4;
+  margin-top: 100px;
   padding: 120px 114px 93px 115px;
 
   @media ${device.tablet}{
